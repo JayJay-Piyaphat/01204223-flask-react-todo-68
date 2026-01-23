@@ -66,6 +66,8 @@ def add_todo():
         db.session.add(todo)                       # บรรทัดที่ปรับใหม่
         db.session.commit()                        # บรรทัดที่ปรับใหม่ 
         return jsonify(todo.to_dict())             # บรรทัดที่ปรับใหม่
+        # return http response code 201 for created
+        return (jsonify(todo.to_dict()), 201)
     else:
         # return http response code 400 for bad requests
         return (jsonify({'error': 'Invalid todo data'}), 400)
