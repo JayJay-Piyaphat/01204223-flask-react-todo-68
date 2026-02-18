@@ -23,7 +23,7 @@ function TodoItem({ todo, toggleDone, deleteTodo, addNewComment }) {
             )}
             {(!todo.comments || todo.comments.length === 0) && <p>No comments</p>}
             <div className="new-comment-forms">
-                <b>Add Comment:</b>
+                <b>dd Comment:</b>
                 <input
                     type="text"
                     value={newComment}
@@ -32,7 +32,7 @@ function TodoItem({ todo, toggleDone, deleteTodo, addNewComment }) {
                 <button onClick={() => {
                     addNewComment(todo.id, newComment);
                     setNewComment("");
-                }}>Add</button>
+                }}>Add Comment</button>
             </div>
         </li>
     )
